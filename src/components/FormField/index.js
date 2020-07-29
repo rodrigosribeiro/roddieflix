@@ -6,7 +6,7 @@ function FormField({ label, type, name, value, onChange }) {
             <div>
                 <label>
                     {label}
-                    <textArea
+                    <textarea
                         name={name}
                         value={value}
                         onChange={onChange}
