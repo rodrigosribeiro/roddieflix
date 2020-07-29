@@ -13,7 +13,7 @@ function Pagina404() {
   return (
     <Main>
       <h2 style = {{textAlign: 'center'}}>404 - Esta página não pode ser encontrada</h2>
-      <iframe src="https://mariosouto.com/flappy-bird-devsoutinho/" width="340" height="600" overflow = "hidden"></iframe> 
+      <iframe title='game' src="https://mariosouto.com/flappy-bird-devsoutinho/" width="340" height="600" overflow = "hidden"></iframe> 
     </Main>
     )
 }
