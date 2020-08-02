@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Title = styled.h3`
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1;
-  margin-bottom: -11px;
+  margin-bottom: -0;
   display: inline-block;
-  padding: 10px;
+  padding: 15px;
   background: ;
   line-height: 1;
   border-radius: 4px;

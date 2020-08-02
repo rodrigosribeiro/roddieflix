@@ -1,191 +1,154 @@
 {
-    "categorias": [
-      {
-        "id": 1,
-        "nome": "Front End",
-        "cor": "#6BD1FF",
-        "link_extra": {
-          "text": "Formação de Front End na Alura",
-          "url": "https://www.alura.com.br/cursos-online-front-end"
-        }
+  "categorias": [
+    {
+      "titulo": "Batera",
+      "cor": "#00fadd",
+      "descricao": "Bateristas",
+      "id": 6
+    },
+    {
+      "titulo": "Drum Solos",
+      "cor": "#fc0303",
+      "descricao": "The best drummer´s solos",
+      "link_extra": {
+        "text": "",
+        "url": ""
       },
-      {
-        "id": 2,
-        "nome": "Back End",
-        "cor": "#00C86F",
-        "link_extra": {
-          "text": "Cursos de Back End na Alura",
-          "url": "https://www.alura.com.br/cursos-online-programacao"
-        }
+      "id": 8
+    },
+    {
+      "titulo": "Rock Music",
+      "cor": "#4cf051",
+      "descricao": "Music",
+      "link_extra": {
+        "text": "",
+        "url": ""
       },
-      {
-        "id": 3,
-        "nome": "Data Science e Inteligência Artificial",
-        "cor": "#9cd33b",
-        "link_extra": {
-          "text": "Cursos de Data Science na Alura",
-          "url": "https://www.alura.com.br/cursos-online-mobile"
-        }
+      "id": 9
+    },
+    {
+      "titulo": "F1",
+      "cor": "#a90f9f",
+      "descricao": "Fórmula !",
+      "link_extra": {
+        "text": "",
+        "url": ""
       },
-      {
-        "id": 4,
-        "nome": "Filmes",
-        "cor": "orange"
+      "id": 10
+    },
+    {
+      "titulo": "Marvel",
+      "cor": "#ff9500",
+      "descricao": "Best Marvel",
+      "link_extra": {
+        "text": "",
+        "url": ""
       },
-      {
-        "id": 5,
-        "nome": "Games",
-        "cor": "red",
-        "link_extra": {
-          "text": "Formação de Jogos na Alura",
-          "url": "https://www.alura.com.br/cursos-online-front-end"
-        }
-      }
-    ],
-    "videos": [
-      {
-        "id": 1,
-        "categoriaId": 1,
-        "nome": "SEO com React",
-        "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
-      },
-      {
-        "id": 2,
-        "categoriaId": 1,
-        "nome": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-        "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
-      },
-      {
-        "id": 3,
-        "categoriaId": 1,
-        "nome": "Componentização com VanillaJS #AluraMais",
-        "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
-      },
-      {
-        "id": 4,
-        "categoriaId": 1,
-        "nome": "Pare de chutar e aprenda a display: inline #01",
-        "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-      },
-      {
-        "id": 5,
-        "categoriaId": 1,
-        "nome": "Template String: Interpolando strings com JavaScript #AluraMais",
-        "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
-      },
-      {
-        "id": 6,
-        "categoriaId": 1,
-        "nome": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
-        "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
-      },
-      {
-        "id": 7,
-        "categoriaId": 1,
-        "nome": "Novidades do Angular v9",
-        "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
-      },
-      {
-        "id": 8,
-        "categoriaId": 2,
-        "nome": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
-        "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
-      },
-      {
-        "id": 9,
-        "categoriaId": 2,
-        "nome": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-        "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
-      },
-      {
-        "id": 10,
-        "categoriaId": 2,
-        "nome": "Programei 4 robôs que criam vídeos para mim no YouTube",
-        "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
-      },
-      {
-        "id": 11,
-        "categoriaId": 2,
-        "nome": "API: Dicionário do Programador",
-        "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
-      },
-      {
-        "id": 12,
-        "categoriaId": 2,
-        "nome": "Usando Git Direito",
-        "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
-      },
-      {
-        "id": 13,
-        "categoriaId": 3,
-        "nome": "Teste de Turing",
-        "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
-      },
-      {
-        "id": 14,
-        "categoriaId": 3,
-        "nome": "O que é Data Science?",
-        "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
-      },
-      {
-        "id": 15,
-        "categoriaId": 3,
-        "nome": "Melhor forma de aprender Python",
-        "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
-      },
-      {
-        "id": 16,
-        "categoriaId": 3,
-        "nome": "Como ingressar no mercado de Data Science?",
-        "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
-      },
-      {
-        "id": 17,
-        "categoriaId": 4,
-        "nome": "Interestellar",
-        "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
-      },
-      {
-        "id": 18,
-        "categoriaId": 4,
-        "nome": "Gattaca",
-        "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
-      },
-      {
-        "id": 19,
-        "categoriaId": 4,
-        "nome": "A Chegada",
-        "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
-      },
-      {
-        "id": 20,
-        "categoriaId": 4,
-        "nome": "Feitiço do Tempo",
-        "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
-      },
-      {
-        "id": 21,
-        "categoriaId": 5,
-        "nome": "Final Fantasy 7",
-        "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
-      },
-      {
-        "id": 22,
-        "categoriaId": 5,
-        "nome": "Assassins Creed Valhalla",
-        "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
-      },
-      {
-        "id": 23,
-        "categoriaId": 5,
-        "nome": "God of War 4",
-        "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
-      },
-      {
-        "id": 24,
-        "categoriaId": 5,
-        "nome": "Resident Evil 8",
-        "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-      }
-    ]
-  }
+      "id": 11
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "Dave Weckl \"Steroids\"",
+      "url": "https://www.youtube.com/watch?v=S1BNRvPVGqY",
+      "categoriaId": 8,
+      "id": 1
+    },
+    {
+      "titulo": "Soul Sacrifice / Dennis Chambers",
+      "url": "https://www.youtube.com/watch?v=NKv5-rOIY_0",
+      "categoriaId": 8,
+      "id": 2
+    },
+    {
+      "titulo": "Meinl Drum Festival - Chris Coleman",
+      "url": "https://www.youtube.com/watch?v=EiMLuj8_QhI",
+      "categoriaId": 8,
+      "id": 3
+    },
+    {
+      "titulo": "Anika Nilles - Malay/RTB",
+      "url": "https://www.youtube.com/watch?v=5Es6iq5Tljw",
+      "categoriaId": 8,
+      "id": 4
+    },
+    {
+      "titulo": "Benny Greb Drum Solo",
+      "url": "https://www.youtube.com/watch?v=KdmrxZTWSds",
+      "categoriaId": 8,
+      "id": 5
+    },
+    {
+      "titulo": "Queen - Bohemian Rhapsody",
+      "url": "https://www.youtube.com/watch?v=wBqMbefDgys",
+      "categoriaId": 9,
+      "id": 6
+    },
+    {
+      "titulo": "The Beatles - Help!",
+      "url": "https://www.youtube.com/watch?v=2Q_ZzBGPdqE",
+      "categoriaId": 9,
+      "id": 7
+    },
+    {
+      "titulo": "Bob Dylan - Like a Rolling Stone",
+      "url": "https://www.youtube.com/watch?v=IwOfCgkyEj0",
+      "categoriaId": 9,
+      "id": 8
+    },
+    {
+      "titulo": "Led Zeppelin - Immigrant Song - Live 1972",
+      "url": "https://www.youtube.com/watch?v=RlNhD0oS5pk",
+      "categoriaId": 9,
+      "id": 9
+    },
+    {
+      "titulo": "2020 British Grand Prix: Qualifying Highlights",
+      "url": "https://www.youtube.com/watch?v=ykxgszYJBUY&t=71s",
+      "categoriaId": 10,
+      "id": 10
+    },
+    {
+      "titulo": "Verstappen And Leclerc's Epic Silverstone Battle | 2019 British Grand Prix",
+      "url": "https://www.youtube.com/watch?v=RmvZyC6s_Wk",
+      "categoriaId": 10,
+      "id": 11
+    },
+    {
+      "titulo": "Top 10 On-Track Battles Of 2019",
+      "url": "https://www.youtube.com/watch?v=UDCLGO8vY-o",
+      "categoriaId": 10,
+      "id": 12
+    },
+    {
+      "titulo": "F1 Driver Streams: Top 10 Funniest Moments!",
+      "url": "https://www.youtube.com/watch?v=ohW3-QvLbM0",
+      "categoriaId": 10,
+      "id": 13
+    },
+    {
+      "titulo": "Vingadores - Ultimato",
+      "url": "https://www.youtube.com/watch?v=g6ng8iy-l0U",
+      "categoriaId": 11,
+      "id": 14
+    },
+    {
+      "titulo": "Homem de Ferro 3: Trailer Oficial Dublado",
+      "url": "https://www.youtube.com/watch?v=igfXmU1r_mc",
+      "categoriaId": 11,
+      "id": 15
+    },
+    {
+      "titulo": "Homem aranha de volta ao lar trailer",
+      "url": "https://www.youtube.com/watch?v=2x-2iYxgMFU",
+      "categoriaId": 11,
+      "id": 16
+    },
+    {
+      "titulo": "X-Men: Fênix Negra | Trailer Oficial 2 | Legendado HD",
+      "url": "https://www.youtube.com/watch?v=kS08vVQDRPs",
+      "categoriaId": 11,
+      "id": 17
+    }
+  ]
+}

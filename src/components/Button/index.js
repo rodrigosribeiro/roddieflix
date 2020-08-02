@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
-const Button = styled.button`
+export const Button = styled.button`
     color: var(--white);
     border: 1px solid var(--white);
     background: var(--black);
@@ -20,5 +20,30 @@ const Button = styled.button`
     &:focus {
     opacity: .5;
     }
-`
-export default Button
+`;
+
+export const ButtonExcluir = styled.button`
+    color: var(--white);
+    border: 1px solid var(--white);
+    background: red;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 3px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 22px;
+    margin-bottom: 4px;
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity .3s;
+
+    &:hover,
+    &:focus {
+    opacity: .5;
+    }
+`;
+
+export default Button;

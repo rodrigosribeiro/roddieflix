@@ -1,49 +1,60 @@
-import React from 'react'
-import Menu from '../../components/Menu'
-import dadosIniciais from '../../data/dados_iniciais.json'
-import BannerMain from '../../components/BannerMain'
-import Carousel from '../../components/Carousel'
-import Footer from '../../components/Footer'
+import React, { useEffect, useState } from 'react';
+import BannerMain from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import categoriasRepository from '../../repositories/categorias';
+import PageDefault from '../../components/PageDefault';
+import { getNodeText } from '@testing-library/react';
 
 function Home() {
+  const [dadosIniciais, setDadosIniciais] = useState([]);
+
+  useEffect(() => {
+    categoriasRepository.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  let verificador = 0;
+
   return (
-    <div style={{ background: "#141414" }}>
-      <Menu />
+    <PageDefault paddingAll={0}>
 
-      <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"Gosta de filmes e de batera? Taí um trechinho pra você apreciar."}
-      />
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
+      {dadosIniciais.map((categoria, indice) => {
+        for (let i = 0; i < dadosIniciais.length; i += 1) {
+          if (!(typeof dadosIniciais[indice].videos[0] === 'undefined') && verificador === 0) {
+            verificador += 1;
+            return (
+              <div key={categoria.id}>
+                <BannerMain
+                  videoTitle={dadosIniciais[indice].videos[0].titulo}
+                  url={dadosIniciais[indice].videos[0].url}
+                  videoDescription={dadosIniciais[indice].videos[0].description}
+                />
+                <Carousel
+                  ignoreFirstVideo
+                  category={dadosIniciais[indice]}
+                />
+              </div>
+            );
+          }
+          if (!(typeof dadosIniciais[indice].videos[0] === 'undefined')) {
+            return (
+              <Carousel
+                key={categoria.id}
+                category={categoria}
+              />
+            );
+          }
+        }
+      })}
 
-      <Carousel
-        category={dadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[2]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[3]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[4]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
-      />      
-
-      <Footer />
-
-    </div>
+    </PageDefault>
   );
 }
 

@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import { Button, ButtonExcluir } from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
+
+const Container = styled.div`
+  text-align: end;
+`;
+
+const LinkStyled = styled.a`
+  margin-left: calc(100vw - 35vw);
+`;
 
 function CadastroCategoria() {
+  const history = useHistory();
+
   const valoresIniciais = {
     nome: '',
     descricao: '',
     cor: '',
   };
+
+  const { handlerChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor, // atribuido dinamicamente por causa das chaves exemplo nome: 'valor'
-    });
-  }
-
-  function handlerChange(infoEvento) {
-    setValue(
-      infoEvento.target.getAttribute('name'),
-      infoEvento.target.value,
-    );
-  }
 
   useEffect(() => {
     const URL_TOP = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias' 
-      : 'https://roddieflix.herokuapp.com/categorias'
+      ? 'http://localhost:8080/categorias'
+      : 'https://roddieflix.herokuapp.com/categorias';
     fetch(URL_TOP).then(async (respostaDoServidor) => {
       const resposta = await respostaDoServidor.json();
       setCategorias([
@@ -54,11 +55,24 @@ function CadastroCategoria() {
 
       <form onSubmit={function handlerSubmit(infoEvento) {
         infoEvento.preventDefault();
-        setCategorias([
+
+        categoriasRepository.create({
+          titulo: values.nome,
+          cor: values.cor,
+          descricao: values.descricao,
+          link_extra: {
+            text: '',
+            url: '',
+          },
+        })
+          .then(() => {
+            history.push('/');
+          });
+        /*  setCategorias([
           ...categorias,
           values,
         ]);
-        setValues(valoresIniciais);
+        clearForm(); */
       }}
       >
 
@@ -86,10 +100,18 @@ function CadastroCategoria() {
           onChange={handlerChange}
         />
 
+        <Container>
+          <LinkStyled>
+            <Link to="/">
+              Ir para home
+            </Link>
+          </LinkStyled>
+        </Container>
+
         <Button>Cadastrar</Button>
 
       </form>
-
+      <h2>Categorias Cadastrados</h2>
       {categorias.length === 0 && (
         <div>
           {/* Carregando */}
@@ -99,15 +121,20 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
+            <ButtonExcluir onClick={() => {
+              categoriasRepository.deleteCategoria(categoria.id)
+                .then(() => {
+                  history.push('/');
+                });
+            }}
+            >
+              Excluir
+            </ButtonExcluir>
           </li>
         ))}
       </ul>
-
-      <Link to="/">
-        Ir para home
-      </Link>
     </PageDefault>
   );
 }
