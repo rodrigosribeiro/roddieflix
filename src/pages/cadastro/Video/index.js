@@ -107,7 +107,7 @@ function CadastroVideo() {
             <ButtonExcluir onClick={() => {
               videosRepository.deleteVideo(video.id)
                 .then(() => {
-                  history.push('/cadastro/video');
+                  history.push('/');
                 });
             }}
             >
