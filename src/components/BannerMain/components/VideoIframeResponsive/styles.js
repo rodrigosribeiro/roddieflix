@@ -6,7 +6,8 @@ export const VideoContainer = styled.div`
   width: 100%;
   padding-top: 56.25%;
   @media (max-width: 800px) {
-    display: none;
+    text-align: center;
+    width:100%;
   }
 `;
 
